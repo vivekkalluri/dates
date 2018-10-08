@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    </head>
+    <body>
+        
+      
+        <h2>REGIATRATION FORM</h2>
+        <form onsubmit='return onSubmit(form)'>
+    
+    <label>STUDENT ID:</label>
+    <input name='id' placeholder='STUDENT ID '><br>
+    
+    <label>NAME:</label>
+    <input name='user' placeholder='NAME'><br>
+    
+    <label> COURSE:</label>
+    <input name='course' placeholder='COURSE'><br>
+    
+    <label>CONTACT:</label>
+    <input name='number'  placeholder='MOBILE NUMBER'><br>
+  
+    
+    <button type='submit'>submit</button>
+        </form>
+        </body>
+        <script>
+    
+            function onSubmit( form ){
+            var data = JSON.stringify( $(form).serializeArray() );  
+            console.log( data );
+            return false;
+            }
+    
+    
+        </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+   
+</html>
+    
+    
+    

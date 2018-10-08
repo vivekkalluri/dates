@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+       <style>
+  body{
+  margin:25px 50px;
+  
+}
+
+#rowButton{
+ 
+  width: 200px;
+  margin-left: 40px;
+  border-radius: 5px;
+  border-color: #fff;
+  border-width: 1px;
+}
+        
+    </style>
+        
+    <body>
+        
+<table id="main">
+    <th class="head"><input type="text" ></input></th>
+    <th class="head"><input type="text" ></input></th>
+    <th class="head"><input type="text" ></input></th>
+    <th class="head"><input type="text" ></input></th>
+    
+    <tr class="alt" id="row">
+        <td><input type="text" ></input></td>
+        <td><input type="text" ></input></td>
+        <td><input type="text" ></input></td>
+        <td><input type="text" ></input></td>
+    </tr>
+ 
+    <tr>
+        <td><input type="text" ></input></td>
+        <td><input type="text" ></input></td>
+        <td><input type="text" ></input></td>
+        <td><input type="text" ></input></td>
+          
+            </tr>
+  
+   
+</table>
+       
+ <input type="button" value="Add New Row" onclick="addRow();" id="rowButton" />
+        
+</body>
+
+
+
+<script>
+function addRow() {
+    var table = document.getElementById("main");
+	var rws = table.rows;
+	var cols = table.rows[0].cells.length;
+    var row = table.insertRow(rws.length);
+	var cell;
+	for(var i=0;i<cols;i++){
+                             
+		cell = row.insertCell(i);
+		cell.innerHTML = '<input type="text">';
+	}
+}
+                             
+ </script>
+</html>
